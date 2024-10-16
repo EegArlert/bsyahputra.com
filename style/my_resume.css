@@ -9,8 +9,6 @@ a {
     font-size: var(--font-size);
     text-decoration: none;
     display: inline-block;
-    width: 100%;
-    height: 100%;
     text-align: start;
 }
 
@@ -24,7 +22,7 @@ p {
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.70);
+    background-color: rgba(233, 233, 233, 1);
     color: rgba(0, 0, 0, 0.83);
     width: 100%;
     min-height: 75%;
@@ -36,8 +34,8 @@ body {
 body .wrapper {
     margin: 0.5rem 0.5rem;
     padding: 30px 10% 30px 10%;
-    width: 80%;
-    height: 95%;
+    width: 60vw;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     background-color: rgba(233, 233, 233, 1);
@@ -49,19 +47,17 @@ body .wrapper {
 /* Header Container Styling Starts */
 header {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-bottom: 10px;
-    padding-top: 30px;
+    gap: 150px;
+    margin: 50px 0 60px 0;
 }
 
 header .logo {
-    align-self: start;
     display: flex;
     flex-direction: column;
     width: 300px;
     font-size: 14px;
-    padding: 0 40px 20px 0;
 }
 
 /* Logo Container Animation Starts */
@@ -86,31 +82,14 @@ header .logo .heading-last-name {
 header .logo .heading-last-name:hover {
     padding: 0 75px 0 0;
 }
-/* Logo Container Animation Ends */
-
-/* 
-header .title {
-    border-bottom: solid 1.3px;
-    padding-bottom: 40px;
-    width: 60%;
-    text-align: center;
-} */
-
-header h1 {
-    font-size: 2.5rem;
-}
 
 header .heading-nav {
-    position: relative;
-    bottom: 60px;
-    align-self: end;
     display: flex;
     align-items: center;
     height: 100%;
     min-width: 50px;
     font-size: var(--anchor-font-size-link);
     gap: 30px;
-    flex-wrap: wrap;
     color: rgba(0, 0, 0, 0.8);
 }
 
@@ -124,23 +103,30 @@ header .heading-nav .nav-wrapper .navigation {
     position: relative;
     bottom: 0;
     transition: bottom 0.2s ease;
+    padding-bottom: 2px;
 }
 
 header .heading-nav .nav-wrapper:hover .navigation {
     position: relative;
-    bottom: 8px;
-    box-shadow: 0 1.4px rgba(0, 0, 0, 0.83);
+    bottom: 7px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.83);
 }
 
-header .heading-nav .resume .navigation {
-    box-shadow: 0 1.4px rgba(0, 0, 0, 0.83);
+header .heading-nav .nav-wrapper.resume .navigation{
+    box-shadow: 0 2px rgba(0, 0, 0, 0.83);
 }
 /* Header Container Styling Ends */
 
 /* Main Container Styling Starts */
+
 main {
     display: flex;
     flex-direction: column;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 main p,
@@ -162,7 +148,7 @@ main section {
     text-align: center;
     gap: 20px;
     border-top: solid 1.3px;
-    width: 70%;
+    width: 68%;
     padding: 40px 20px 40px 20px;
 }
 
@@ -231,7 +217,7 @@ footer h2 {
 
 footer .personal-info {
     display: grid;
-    grid-template-columns: 60px 10px 230px;
+    grid-template-columns: 30px 10px 230px;
     grid-template-rows: repeat(3, 30px);
     gap: 2px;
     margin-bottom: 30px;
@@ -242,6 +228,11 @@ footer .personal-info {
 footer .personal-info .span-info {
     grid-column: 1;
     justify-self: center;
+}
+
+footer .personal-info span img {
+    width: 20px;
+    height: 20px;
 }
 
 footer .personal-info .span-semicolon {
